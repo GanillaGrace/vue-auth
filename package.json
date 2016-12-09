@@ -27,12 +27,9 @@
   "version": "2.2.2",
   "repository": {
     "type": "git",
-    "url": "https://github.com/websanova/vue-auth"
+    "url": "https://github.com/ganillagrace/vue-auth"
   },
   "licenses": "MIT, GPL",
-  "dependencies": {
-    "@ganillagrace/vue-auth": "2.2.1-beta"
-  },
   "devDependencies": {
     "babel-core": "6.9.1",
     "babel-loader": "6.2.4",
