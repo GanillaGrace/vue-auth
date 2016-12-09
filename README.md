@@ -29,14 +29,14 @@ Early support for Vue 2.0 is now available also but may still be a bit unstable 
 
 ## Notes
 
-* The new 2.x branch features a driver centric model. This means the `router` and `http` options must **ALWAYS** set the driver to use. Please read the [Change Log](https://github.com/websanova/vue-auth#change-log) for more info. 
+* The new 2.x branch features a driver centric model. This means the `router` and `http` options must **ALWAYS** set the driver to use. Please read the [Change Log](https://github.com/websanova/vue-auth#change-log) for more info.
 
 
 
 ## Install 2.x
 
 ~~~
-> sudo npm install @websanova/vue-auth
+> sudo npm install @ganillagrace/vue-auth
 ~~~    
 
 The `router` and `http` drivers MUST be set. The drivers are quite small so can be replaced or overridden as necessary.
@@ -50,10 +50,10 @@ Vue.router = new VueRouter({
     ...
 });
 
-Vue.use(require('@websanova/vue-auth'), {
-    auth: require('@websanova/vue-auth/drivers/auth/bearer.js'),
-    http: require('@websanova/vue-auth/drivers/http/vue-resource.1.x.js'),
-    router: require('@websanova/vue-auth/drivers/router/vue-router.2.x.js'),
+Vue.use(require('@ganillagrace/vue-auth'), {
+    auth: require('@ganillagrace/vue-auth/drivers/auth/bearer.js'),
+    http: require('@ganillagrace/vue-auth/drivers/http/vue-resource.1.x.js'),
+    router: require('@ganillagrace/vue-auth/drivers/router/vue-router.2.x.js'),
     ...
     rolesVar: 'type'
     ...
@@ -65,7 +65,7 @@ Vue.use(require('@websanova/vue-auth'), {
 ## Install 1.x
 
 ~~~
-> sudo npm install @websanova/vue-auth
+> sudo npm install @ganillagrace/vue-auth
 ~~~    
 
 ~~~
@@ -75,7 +75,7 @@ Vue.router = new VueRouter({
     ...
 });
 
-Vue.use(require('@websanova/vue-auth'), {
+Vue.use(require('@ganillagrace/vue-auth'), {
     rolesVar: 'type'
 });
 ~~~
@@ -203,7 +203,7 @@ bearerAuth: {
 
         if (token) {
             token = token.split('Bearer ');
-            
+
             return token[token.length > 1 ? 1 : 0];
         }
     }
@@ -216,7 +216,7 @@ The driver `response` method receives the `res` argument and should parse out th
 
 To setup a custom driver we simply need to set the `authType` option and the naming convention will follow.
 
-**Example 1: Token in sub object of body** 
+**Example 1: Token in sub object of body**
 
 Maybe the token is returned in a non standard way such as `{data: {token: 'abcd1234'}}`.
 
@@ -233,7 +233,7 @@ custom1Auth: {
 }
 ~~~
 
-**Example 2: Token with multiple parts** 
+**Example 2: Token with multiple parts**
 
 Another common scenario may be a token with multiple data points that all need to be returned to the server.
 
@@ -684,7 +684,7 @@ Pretty much all methods are overrideable now in case there any specific issues w
 
 ### check: `_check`
 
-* Function used during `check` method. 
+* Function used during `check` method.
 
 
 
@@ -759,7 +759,7 @@ We will see some ugly `require` code when including the plugin. But as a trade o
 ### v1.0.x-dev
 
 * Module renamed to `vue-auth` from `vue-jwt-auth`.
-* Package name is scoped through `@websanova/vue-auth` now.
+* Package name is scoped through `@ganillagrace/vue-auth` now.
 * Added demo with lots of sample code.
 * Added demo server (https://api-demo.websanova.com) available on GitHub (https://github.com/websanova/laravel-api-demo).
 * Any default data for a request is an object now that goes directly into the `http` method. So it can be called with whatever parameters the method supports.
