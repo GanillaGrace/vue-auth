@@ -1,5 +1,4 @@
 {
-  "private": true,
   "name": "@GanillaGrace/vue-auth",
 
   "description": "FORKED: @websanova/vue-auth Vue.js token based authentication plugin. Supports simple token based and Json Web Tokens (JWT) authentication.",
@@ -16,7 +15,7 @@
   "contributors": {
     "name": "Christoffer Rydberg",
     "url": "https://ganillagrace.se",
-    "username": "murum",
+    "username": "murum"
   },
 
   "main": "src/index.js",
