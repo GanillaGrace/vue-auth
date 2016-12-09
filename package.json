@@ -1,8 +1,9 @@
 {
-  "name": "@websanova/vue-auth",
+  "private": true,
+  "name": "@GanillaGrace/vue-auth",
 
-  "description": "Vue.js token based authentication plugin. Supports simple token based and Json Web Tokens (JWT) authentication.",
-  
+  "description": "FORKED: @websanova/vue-auth Vue.js token based authentication plugin. Supports simple token based and Json Web Tokens (JWT) authentication.",
+
   "keywords": ["vue", "vue.js", "jwt", "auth", "authentication", "plugin", "json", "web", "token"],
 
   "author": {
@@ -11,22 +12,28 @@
     "username": "websanova",
     "email": "rob@websanova.com"
   },
-  
+
+  "contributors": {
+    "name": "Christoffer Rydberg",
+    "url": "https://ganillagrace.se",
+    "username": "murum",
+  },
+
   "main": "src/index.js",
-  
-  "version": "2.2.0-beta",
-  
+
+  "version": "2.2.1-beta",
+
   "repository": {
     "type": "git",
     "url": "https://github.com/websanova/vue-auth"
   },
-  
+
   "licenses": "MIT, GPL",
-  
+
   "dependencies": {
-    "@websanova/vue-auth": "2.2.0-beta"
+    "@GanillaGrace/vue-auth": "2.2.1-beta"
   },
-  
+
   "devDependencies": {
     "babel-core": "6.9.1",
     "babel-loader": "6.2.4",
@@ -45,7 +52,7 @@
     "copy-webpack-plugin": "3.0.1",
     "replace-webpack-plugin": "0.1.2"
   },
-  
+
   "scripts": {
     "1.x.demo": "webpack-dev-server --host=0.0.0.0 --https --port=8001 --content-base=1.x.demo/public/ --config=1.x.demo/webpack.config.js",
     "2.x.demo": "webpack-dev-server --host=0.0.0.0 --https --port=8002 --content-base=2.x.demo/public/ --config=2.x.demo/webpack.config.js"
